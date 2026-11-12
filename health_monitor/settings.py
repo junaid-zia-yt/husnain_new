@@ -16,10 +16,7 @@ if not SECRET_KEY:
         raise ImproperlyConfigured("Set DJANGO_SECRET_KEY for production.")
     SECRET_KEY = "development-only-insecure-change-me"
 
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-    if host.strip()
+ALLOWED_HOSTS = ["*"
 ]
 
 # No Django ORM applications are installed and no SQL database is configured.
