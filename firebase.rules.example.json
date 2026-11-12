@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "patient": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "ecg_live": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
